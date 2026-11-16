@@ -44,8 +44,8 @@ Os agendamentos são armazenados no navegador. A Central de Operações começa 
 
 | Nome completo | RM | Turma | GitHub | LinkedIn |
 | --- | --- | --- | --- | --- |
-| Erik Vasconcelos Da Silva | 575396 | — | [Xcodebyerik](https://github.com/Xcodebyerik) | [Erik Vasconcelos Da Silva](https://www.linkedin.com/in/erik-vasconcelos-9bb074365/) |
-| Felipe Augusto Araújo Ramos da Silva | 575657 | — | [Felipeaards](https://github.com/Felipeaards) | [Felipe Augusto Araújo Ramos da Silva](https://www.linkedin.com/in/felipe-augusto-ara%C3%BAjo-ramos-da-silva-bb7223278/) |
+| Erik Vasconcelos Da Silva | 575396 | 1TDSPT | [Xcodebyerik](https://github.com/Xcodebyerik) | [Erik Vasconcelos Da Silva](https://www.linkedin.com/in/erik-vasconcelos-9bb074365/) |
+| Felipe Augusto Araújo Ramos da Silva | 575657 | 1TDSPT | [Felipeaards](https://github.com/Felipeaards) | [Felipe Augusto Araújo Ramos da Silva](https://www.linkedin.com/in/felipe-augusto-ara%C3%BAjo-ramos-da-silva-bb7223278/) |
 | Henrique dos Santos Ramalho | 575759 | 1TDSPA | [henriqueramalho299](https://github.com/henriqueramalho299) | [Henrique dos Santos Ramalho](https://www.linkedin.com/in/henrique-ramalho-aa54752b0/) |
 
 ## Repositório
