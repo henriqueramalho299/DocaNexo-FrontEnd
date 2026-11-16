@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101418"><meta name="description" content="Protótipo acadêmico que organiza a chegada de caminhões por doca e horário, bloqueia reservas sobrepostas e compara o impacto de cada cenário na vizinhança."><title>DocaNexo — Agendamento de docas e impacto na vizinhança</title><script src="js/intro.js"></script><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/page-transition.css"><script src="js/main.js" defer></script><script src="js/agenda-dados.js" defer></script><script src="js/impacto-calculo.js" defer></script><script src="js/home-demo.js" defer></script></head>
+<body class="page-home">
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<div class="intro" id="intro" aria-hidden="true"><div class="intro-brand"><span class="logo-symbol">⬡</span><span>DOCA<strong>NEXO</strong></span></div><span class="intro-bar"></span><small>AGENDAMENTO DE DOCAS · IMPACTO NA VIZINHANÇA</small></div>
+<header class="site-header" id="header"><a class="brand" href="index.html" aria-label="DocaNexo — início"><span class="logo-symbol">⬡</span> DOCA<strong>NEXO</strong></a><button type="button" class="menu-toggle" id="menuToggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button><nav class="site-nav" id="nav" aria-label="Principal"><a href="#fluxo">Como funciona</a><a href="impacto.html">Impacto urbano</a><a href="sobre.html">Sobre</a><a href="integrantes.html">Integrantes</a><a href="faq.html">FAQ</a><a href="contato.html">Contato</a><a class="nav-cta" href="agendamentos.html">Central de operações <span class="arrow-up-right" aria-hidden="true"></span></a></nav><span class="page-transition-line" aria-hidden="true"></span></header>
+<main id="conteudo">
+<section class="hero" id="inicio" aria-labelledby="hero-title"><div class="hero-media" aria-hidden="true"><picture><source srcset="assets/carreta-docanexo.webp" type="image/webp"><img src="assets/carreta-docanexo.png" alt="" width="1672" height="941" decoding="async" fetchpriority="high"></picture></div><div class="hero-shade" aria-hidden="true"></div><div class="hero-content wrap"><div class="section-kicker"><span class="tiny-dot"></span> CITIZENTECH • GLOBAL SOLUTION 2026</div><h1 id="hero-title">Reserve a doca <em>antes do caminhão chegar.</em></h1><p>Veja quais horários estão livres em cada doca, reserve sem conflito e compare o impacto de cada horário sobre a vizinhança do centro de distribuição.</p><div class="actions"><a href="agendamentos.html?view=docas" class="button button-primary">Consultar docas livres <span class="arrow-up-right" aria-hidden="true"></span></a><a href="#fluxo" class="button button-glass">Ver como funciona <span aria-hidden="true">→</span></a></div></div><div class="hero-foot wrap"><span>PROTÓTIPO ACADÊMICO · DADOS DE DEMONSTRAÇÃO</span><a href="#fluxo">VER O FLUXO <span class="down-arrow" aria-hidden="true">↓</span></a></div><div class="hero-scroll-line" aria-hidden="true"></div></section>
+<section class="journey" id="fluxo" aria-labelledby="journey-title">
+  <div class="wrap journey-layout">
+    <header class="journey-heading">
+      <h2 id="journey-title">Da chegada <em>à descarga.</em></h2>
+      <p>Os três passos do protótipo: ver o que está livre, reservar sem conflito e medir o impacto no entorno.</p>
+    </header>
+    <div>
+      <ol class="journey-steps">
+        <li class="journey-step">
+          <article class="journey-card reveal">
+            <h3>Consultar uma doca</h3>
+            <p>Escolha a data e veja, doca a doca, quais horários estão livres e quais já têm caminhão reservado.</p>
+            <div class="journey-preview">
+              <div class="journey-preview-title"><strong>Doca 02</strong><span>Disponibilidade</span></div>
+              <ul class="journey-slots">
+                <li><button type="button" data-demo-time="07:00" aria-pressed="false"><strong>07:00</strong><span>Livre</span></button></li>
+                <li class="journey-slot-occupied"><strong>09:00</strong><span>Ocupada</span></li>
+                <li><button type="button" data-demo-time="10:00" aria-pressed="true"><strong>10:00</strong><span>Livre</span></button></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li class="journey-step">
+          <article class="journey-card reveal">
+            <h3>Reservar um horário</h3>
+            <p>Informe a placa, o horário e a duração. Se outra reserva ocupa a mesma doca nesse intervalo, a Central bloqueia o agendamento.</p>
+            <div class="journey-preview">
+              <div class="journey-preview-title"><strong>Descarga</strong><span class="journey-confirmed">Confirmado</span></div>
+              <dl class="journey-details">
+                <div><dt>Veículo</dt><dd>TRK-3057</dd></div>
+                <div><dt>Doca</dt><dd>02</dd></div>
+                <div><dt>Janela</dt><dd id="journey-window">10:00–11:00</dd></div>
+              </dl>
+            </div>
+          </article>
+        </li>
+        <li class="journey-step">
+          <article class="journey-card reveal">
+            <h3>Avaliar o impacto no entorno</h3>
+            <p>Compare cenários considerando o horário, a quantidade de caminhões por doca e o tipo de área no entorno.</p>
+            <div class="journey-preview">
+              <div class="journey-preview-title"><strong>Índice de Impacto de Vizinhança</strong><span id="journey-level">Baixo</span></div>
+              <strong class="journey-score"><span id="journey-score">24</span><small> / 100</small></strong>
+              <meter class="journey-meter" min="0" max="100" value="24" aria-label="Índice de Impacto de Vizinhança no exemplo">24 de 100</meter>
+              <p class="journey-note">8 caminhões · 4 docas · <span id="journey-time">10:00</span> · área industrial. <span id="journey-comparison">Às 07:00, o mesmo cenário sobe para 54 (Moderado).</span></p>
+              <a class="journey-link" href="impacto.html">Abrir o simulador</a>
+            </div>
+          </article>
+        </li>
+      </ol>
+      <div class="journey-actions">
+        <small>Horários e indicador ilustrativos.</small>
+        <a href="agendamentos.html?view=docas" class="button button-primary">Consultar docas <span class="arrow-up-right" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="manifesto scroll-stage" id="conceito" aria-labelledby="manifesto-title"><div class="manifesto-inner wrap"><span class="section-kicker scroll-fade">O PROBLEMA</span><h2 id="manifesto-title" class="manifesto-title" data-split>Oito caminhões chegam às 7h e só há quatro docas.</h2><p class="scroll-fade">Os outros quatro esperam na rua: a descarga atrasa e o trânsito de veículos pesados e o ruído se concentram na vizinhança do centro de distribuição.</p></div><div class="manifesto-line" aria-hidden="true"></div></section>
+<section class="solution section" id="solucao"><div class="wrap"><div class="section-heading reveal"><div><span class="section-kicker">ESCOPO DO PROTÓTIPO</span><h2>O que o DocaNexo faz</h2></div></div><div class="scope-grid reveal">
+<section><h3>Já funciona</h3><ul><li>Consulta de horários livres por data, em quatro docas, das 07h às 16h (sem janela às 12h).</li><li>Reserva com bloqueio automático quando o intervalo se sobrepõe a outra reserva na mesma doca.</li><li>Reservas salvas no navegador, sem servidor.</li><li>Simulador do Índice de Impacto de Vizinhança com três critérios: caminhões por doca, horário e tipo de área.</li></ul></section>
+<section><h3>Ainda é demonstração</h3><ul><li>O índice é ilustrativo e não mede ruído, trânsito nem risco real.</li><li>As quatro docas e os horários de início, de hora em hora, são fixos.</li><li>Não há login nem integração com sistemas de pátio ou de transportadoras.</li><li>O formulário de contato apenas simula o envio.</li></ul></section></div></div></section>
+<section class="platform-teaser section" id="visao"><div class="wrap teaser-grid"><div class="teaser-copy reveal"><span class="section-kicker">CENTRAL DE OPERAÇÕES</span><h2>As próximas chegadas em uma tela</h2><p>A Central lista as reservas por data e horário, mostra o uso de cada doca e abre o formulário já preenchido quando você escolhe um horário livre.</p><a href="agendamentos.html" class="button button-primary">Abrir a Central de operações <span class="arrow-up-right" aria-hidden="true"></span></a><small>Protótipo acadêmico • Dados de demonstração</small></div><div class="dashboard-mock reveal"><div class="mock-header"><strong>DOCANEXO / PRÓXIMAS CHEGADAS</strong><span class="online-pill">● DEMONSTRAÇÃO</span></div><div class="table-scroll" tabindex="0" role="region" aria-label="Reservas de exemplo"><table><thead><tr><th scope="col">Veículo</th><th scope="col">Data</th><th scope="col">Horário</th><th scope="col">Doca</th></tr></thead><tbody id="home-bookings"><tr><td colspan="4">Abra a Central para consultar as reservas.</td></tr></tbody></table></div><div class="mock-bottom">Dados de exemplo salvos neste navegador.</div></div></div></section>
+<section class="closing scroll-stage"><div class="wrap closing-inner reveal"><span class="section-kicker">TESTE O FLUXO</span><h2>Reserve uma doca e veja o impacto desse horário.</h2><div class="closing-actions"><a class="button button-primary" href="agendamentos.html">Abrir a Central de operações</a><a class="button button-outline" href="impacto.html">Simular impacto</a></div></div></section>
+</main><footer class="site-footer project-footer"><div class="wrap"><nav class="project-nav" aria-label="Páginas do DocaNexo"><a href="index.html" aria-current="page">Início</a><a href="agendamentos.html">Agendamentos</a><a href="impacto.html">Impacto urbano</a><a href="sobre.html">Sobre</a><a href="integrantes.html">Integrantes</a><a href="faq.html">FAQ</a><a href="contato.html">Contato</a></nav><p>CitizenTech · Global Solution 2026 · FIAP</p></div></footer>
+</body></html>

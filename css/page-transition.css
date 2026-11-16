@@ -1,0 +1,70 @@
+@view-transition {
+  navigation: auto;
+}
+
+.page-transition-line {
+  display: none;
+}
+
+.page-home a[href^="agendamentos.html"]:active {
+  filter: brightness(.88);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .page-transition-line {
+    display: block;
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: 0;
+    height: 2px;
+    pointer-events: none;
+    view-transition-name: page-progress;
+  }
+
+  ::view-transition-old(root) {
+    animation: 250ms ease-out both page-dim;
+  }
+
+  ::view-transition-new(root) {
+    animation: 250ms ease-out both page-appear;
+  }
+
+  ::view-transition-group(page-progress) {
+    z-index: 1;
+    animation-duration: 250ms;
+  }
+
+  ::view-transition-old(page-progress) {
+    animation: none;
+    opacity: 0;
+  }
+
+  ::view-transition-new(page-progress) {
+    background: var(--lime);
+    transform-origin: left center;
+    animation: 250ms ease-out both page-progress;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none;
+  }
+}
+
+@keyframes page-dim {
+  to { filter: brightness(.68); }
+}
+
+@keyframes page-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes page-progress {
+  from { transform: scaleX(0); }
+  75% { transform: scaleX(1); opacity: 1; }
+  to { transform: scaleX(1); opacity: 0; }
+}

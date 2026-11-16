@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101418">
+  <title>Sobre o projeto — DocaNexo</title>
+  <meta name="description" content="Agendamento de docas para reduzir filas e considerar os efeitos da logística na cidade.">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/page-transition.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body class="page-operations project-page">
+  <a class="skip-link" href="#principal">Ir para o conteúdo</a>
+  <header class="site-header" id="header">
+    <a class="brand" href="index.html" aria-label="DocaNexo — início"><span class="logo-symbol" aria-hidden="true">⬡</span> DOCA<strong>NEXO</strong></a>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav class="site-nav project-nav" id="nav" aria-label="Páginas do DocaNexo"><a href="index.html">Início</a><a href="agendamentos.html">Agendamentos</a><a href="impacto.html">Impacto urbano</a><a href="sobre.html" aria-current="page">Sobre</a><a href="integrantes.html">Integrantes</a><a href="faq.html">FAQ</a><a href="contato.html">Contato</a></nav>
+  <span class="page-transition-line" aria-hidden="true"></span></header>
+  <main class="wrap project-main" id="principal">
+    <header class="project-heading">
+      <h1>Sobre o DocaNexo</h1>
+      <p>O problema que o DocaNexo ataca, o que o protótipo entrega e o que ele ainda não faz.</p>
+    </header>
+    <div class="project-columns">
+      <section class="ops-card"><h2>O problema</h2><p>Quando mais caminhões chegam do que as docas conseguem atender, os últimos esperam na rua. A descarga atrasa e o trânsito de veículos pesados e o ruído se concentram no mesmo horário, ao redor do centro de distribuição.</p></section>
+      <section class="ops-card"><h2>O objetivo</h2><p>Distribuir as chegadas pelos horários livres de cada doca e comparar, antes de reservar, quanto cada horário e cada volume de caminhões pesa sobre moradores, escolas e hospitais próximos.</p></section>
+    </div>
+    <section class="ops-card"><h2>Limites do protótipo</h2><ul class="project-steps"><li>Quatro docas e horários de início de hora em hora, das 07h às 16h, sem janela às 12h.</li><li>As reservas ficam só neste navegador (localStorage); não há servidor, login nem integração com sistemas reais.</li><li>O Índice de Impacto de Vizinhança é ilustrativo: pressão = caminhões ÷ docas × 12 (máx. 50), horário de 0 a 30 e área de 0 a 20, com pesos escolhidos para a demonstração e sem calibração com dados reais.</li><li>O formulário de contato apenas simula o envio.</li></ul></section>
+    <section class="ops-card"><h2>Como a solução funciona</h2>
+      <ol class="project-steps">
+        <li>Consulte os horários livres por data e doca.</li>
+        <li>Registre a operação com o caminhão, o horário e a duração. A Central verifica se há sobreposição com uma reserva existente.</li>
+        <li>Use o simulador para comparar cenários com diferentes volumes de caminhões, horários e áreas no entorno.</li>
+      </ol>
+      <div class="ops-actions"><a href="agendamentos.html" class="button button-primary">Consultar agendamentos</a><a href="impacto.html" class="button button-outline">Simular impacto</a></div>
+    </section>
+  </main>
+  <footer class="site-footer project-footer"><div class="wrap"><nav class="project-nav" aria-label="Páginas do DocaNexo"><a href="index.html">Início</a><a href="agendamentos.html">Agendamentos</a><a href="impacto.html">Impacto urbano</a><a href="sobre.html" aria-current="page">Sobre</a><a href="integrantes.html">Integrantes</a><a href="faq.html">FAQ</a><a href="contato.html">Contato</a></nav><p>CitizenTech · Global Solution 2026 · FIAP</p></div></footer>
+</body>
+</html>
